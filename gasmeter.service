@@ -1,0 +1,13 @@
+[Unit]
+Description=gasmeter
+
+[Service]
+User=root
+WorkingDirectory=/opt/utilitymeters
+ExecStart=/opt/utilitymeters/.venv/bin/python3 gasmeter.py
+Restart=always
+RuntimeMaxSec=1d
+
+[Install]
+WantedBy=multi-user.target
+
